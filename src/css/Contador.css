@@ -12,18 +12,17 @@
     border: 8px solid white;
     margin-bottom: 15px;
     font-family: 'Silkscreen', cursive;
-    animation-duration: 3s;
-    animation-name: slidein;
+    animation: 1.2s slidein infinite;
 }
-@keyframes slidein {
-    from {
-      clip-path: circle(125%);
+
+
+  @keyframes slidein {
+    0% { background: linear-gradient(90deg, rgba(131, 30, 30, 0.98) 50%, rgba(91, 228, 187, 0.96) 0%); }
+    50% { background: linear-gradient(90deg, rgba(27, 87, 143, 0.98) 50%, rgba(48, 25, 175, 0.96) 0%); }
+
+    55% { background: linear-gradient(90deg,  rgba(0, 68, 80, 0.96) 50%, rgba(54, 165, 122, 0.98) 0%); }
+    80% { background: linear-gradient(90deg, rgba(32, 80, 170, 0.96)  50%, rgba(0, 0, 0, 0.98) 0%); }
+
+    85% { background: linear-gradient(90deg, rgba(102, 119, 106, 0.96) 50%, rgba(17, 201, 115, 0.94) 0%); }
+    100% { background: linear-gradient(90deg, rgba(71, 161, 221, 0.96) 50%, rgba(255,255,255,0.94) 0%); }
     }
-    to {
-      clip-path: circle(0% at top right);
-    }
-  }
-  
-  [transition-style="out:circle:top-right"] {
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-top-right both;
-  }
